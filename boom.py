@@ -4,9 +4,9 @@ import random
 
 """pyinstaller boom.py  -F -w -i 源码.ico"""
 
-gamerow = 20
-gamecol = 20
-gameboom = 40
+gamerow = 16
+gamecol = 30
+gameboom = 99
 # from tkinter.ttk import *
 first = True
 win_or_no = None
