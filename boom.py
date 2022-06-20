@@ -81,24 +81,15 @@ def fan(self, row, col, path=None):
                                 count_boom += 1
                 if count_boom > 0:
                     self["text"] = str(count_boom)
-                # else:
-                #     for boom_x in range(-1, 2):
-                #         for boom_y in range(-1, 2):
-                #             if -1 < row + boom_x < gamerow and -1 < col + boom_y < gamecol:
-                #                 if (row + boom_x, col + boom_y) not in path:
-                #                     if game_board[0][row + boom_x][col + boom_y] != "boom":
-                #                         fan(eval(f"btn{str(row + boom_x)}_{str(col + boom_y)}"), row + boom_x,
-                #                             col + boom_y,
-                #                             path)
-                # else:
-                for boom_x in range(-1, 2):
-                    for boom_y in range(-1, 2):
-                        if -1 < row + boom_x < gamerow and -1 < col + boom_y < gamecol:
-                            if (row + boom_x, col + boom_y) not in path:
-                                if game_board[0][row + boom_x][col + boom_y] != "boom":
-                                    fan(eval(f"btn{str(row + boom_x)}_{str(col + boom_y)}"), row + boom_x,
-                                        col + boom_y,
-                                        path)
+                else:
+                    for boom_x in range(-1, 2):
+                        for boom_y in range(-1, 2):
+                            if -1 < row + boom_x < gamerow and -1 < col + boom_y < gamecol:
+                                if (row + boom_x, col + boom_y) not in path:
+                                    if game_board[0][row + boom_x][col + boom_y] != "boom":
+                                        fan(eval(f"btn{str(row + boom_x)}_{str(col + boom_y)}"), row + boom_x,
+                                            col + boom_y,
+                                            path)
 
 
 game = Frame(
